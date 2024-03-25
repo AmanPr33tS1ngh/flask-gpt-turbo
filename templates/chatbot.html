@@ -1,0 +1,17 @@
+{% extends 'base.html' %} {% block head %}
+<title>Chatbot</title>
+{% endblock %} {% block body %}
+<h1>
+    Chats
+</h1>
+<p><strong>You: </strong>{{user_input}}</p>
+
+<p><strong>Bot: </strong>{{bot_response}}</p>
+
+<form method='POST' action={{url_for("chatbot")}}>
+    <label>Message: </label>
+    <div><textarea type="text" id="message" name="message" style="width:100%;height: 30vh;" required></textarea></div>
+    <button type="submit">Send</button>
+</form>
+  {% endblock %}
+</body>
